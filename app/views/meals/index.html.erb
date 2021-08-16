@@ -2,7 +2,7 @@
 
 <ul>
   <% @meals.each do |meal| %>
-    <li><%=link_to meal.meal_name, list_path(list) %></li>
+    <li><%=link_to meal.meal_name, meal_path(meal) %></li>
   <% end %>
 </ul>
 
