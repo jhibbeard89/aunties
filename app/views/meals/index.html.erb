@@ -1,0 +1,9 @@
+<h3>Here are all the avaliable meals: </h3>
+
+<ul>
+  <% @meals.each do |meal| %>
+    <li><%=link_to meal.meal_name, list_path(list) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new meal", new_meal_path %>   

@@ -1,0 +1,18 @@
+<h3>Here are the meal details for <%= @meal.meal_name %>: </h3>
+<div>
+  <h2>Category:</h2>
+  <p><%= @meal.category %></p>
+
+  <h2>Description:</h2>
+  <p><%= @meal.description %></p>
+
+  <h2>Price:</h2>
+  <p><%= @meal.price %></p>
+</div>
+
+<%= link_to "Back to all meals", meals_path %>
+
+<%= link_to "Delete #{@meal.meal_name}",
+            meal_path(@meal),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>

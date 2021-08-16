@@ -1,12 +1,17 @@
-.navbar-lewagon {
+.navbar-auntie {
   justify-content: space-between;
   background: white;
 }
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-auntie .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-auntie .navbar-brand img {
   width: 40px;
 }
