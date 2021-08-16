@@ -1,1 +1,61 @@
 // Specific CSS for your home-page
+.section-container{
+  padding: 25px 0;
+}
+
+.tile-container{
+  display: flex;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px grey;
+  margin-top: 25px;
+  img{
+    max-width: 170px;
+    aspect-ratio: 1/1;
+  }
+}
+
+.tile-contents{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .meal-name{
+    grid-column: 1 / span 2;
+    background-color: $brand-yellow;
+    padding: 5px;
+    margin: 0;
+    color: $off-white;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  .user-name, .user-price{
+    grid-row-start: 2;
+  }
+  .user-name{
+    grid-column-start: 1;
+    padding-left: 10px;
+  }
+  .user-price{
+    grid-column: 2;
+    justify-self: end;
+    padding-right: 10px;
+  }
+  .user-details{
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    padding: 0 10px;
+  }
+}
+
+.meal-order-button{
+  justify-self: end;
+  grid-column: 2;
+  width: 150px;
+  padding: 10px;
+  background-color: $brand-yellow-dark;
+  margin: 0 3px 3px 0;
+  color: $off-white;
+  box-shadow: 3px 3px 5px $light-gray;
+  &:hover{
+    box-shadow: none;
+    color: $off-white;
+  }
+}
