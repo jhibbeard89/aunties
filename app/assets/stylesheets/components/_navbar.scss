@@ -1,6 +1,9 @@
+.navigation{
+  background-color: $brand-green;
+}
+
 .navbar-auntie {
   justify-content: space-between;
-  background: white;
 }
 
 
@@ -14,4 +17,8 @@
 
 .navbar-auntie .navbar-brand img {
   width: 40px;
+}
+
+.nav-links{
+  color: $off-white
 }
