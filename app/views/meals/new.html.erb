@@ -1,11 +1,2 @@
 <h2>Enter your new meal details below:</h2>
-
-<%= simple_form_for(@meal)  do |f| %>
-  <%= f.input :meal_name %>
-  <%= f.input :category %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-
-  <%= f.submit %>
-<% end %>
-
+<%= render "form", meal: @meal %>

@@ -1,4 +1,5 @@
 class MealsController < ApplicationController
+ 
   def index
     @meals = Meal.all
   end
@@ -12,12 +13,25 @@ class MealsController < ApplicationController
   end
 
   def create
-    @meal = Meal.new(meals_params)
-    @meal.save
+    @meal = Meal.new(meal_params)
+    @meal.user = current_user
+    if @meal.save
+        redirect_to meals_path  
+    else
+        render :new
+    end
+  end
+
+  def edit
+    @meal = Meal.find(params[:id])
+  end
+
+  def update
+    @meal = Meal.find(params[:id])
+    @meal.update(meal_params)
 
     redirect_to meal_path(@meal)
   end
-
 
   def destroy
     @meal = Meal.find(params[:id])
@@ -26,9 +40,11 @@ class MealsController < ApplicationController
     redirect_to meals_path
   end
 
+
   private
 
-  def meals_params
+  def meal_params
     params.require(:meal).permit(:meal_name, :category, :price, :description)
   end
+
 end
