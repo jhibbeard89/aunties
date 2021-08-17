@@ -1,0 +1,9 @@
+<h2>Please enter your meal quantity</h2>
+<%= simple_form_for(@order)  do |f| %>
+  <%= f.input :quantity %>
+  <%= f.hidden_field :meal_id, value: params[:format]%>
+
+  <%= f.submit %>
+<% end %>
+
+ <%# <%= f.association :movie, prompt: 'Select a movie', input_html: { class: 'select2' } %>

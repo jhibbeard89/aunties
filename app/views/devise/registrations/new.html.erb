@@ -4,7 +4,8 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-  <%= f.input :first_name,
+    
+    <%= f.input :first_name,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "first-name" }%>
@@ -12,10 +13,6 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "last-name" }%>
-   <%= f.input :user_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "user-name" }%> 
     <%= f.input :address,
                 required: true,
                 autofocus: true,
@@ -35,6 +32,9 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+
+  <%= "Are you a diner or an Auntie?" %> 
+  <%= f.input :auntie, :as => :boolean, input_html: {checked: false} %>
   </div>
 
   <div class="form-actions">
