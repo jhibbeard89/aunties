@@ -14,3 +14,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/meal_tile";
+
+
+h1, h2, h3, h4, h5, button, a{
+  font-family: $headers-font;
+}
+
+p{
+  margin: 0;
+  font-family: $body-font;
+}

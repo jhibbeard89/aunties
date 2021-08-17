@@ -1,6 +1,14 @@
-<h3>The Welcome Page</h3>
+<div class="section-container">
+  <h3>Todays Lunches</h3>
+  <section class="tile-view">
+    <%= render 'tile' %>
+    <%= render 'tile' %>
+    <%= render 'tile' %>
+  </section>
 
-<%# <%= link_to "My Orders", order_path(@order) %>
+
+  <div class="info-box">
+  </div>
+</div>
+
 <%= link_to "Logout", destroy_user_session_path, method: :delete %><br>
-
-
