@@ -16,6 +16,9 @@
 @import "pages/index";
 @import "components/meal_tile";
 
+// Devise components
+@import "devise/form";
+
 
 h1, h2, h3, h4, h5, button, a{
   font-family: $headers-font;

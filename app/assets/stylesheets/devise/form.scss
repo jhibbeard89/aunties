@@ -1,0 +1,38 @@
+.user-form-header {
+  font-family: $body-font;
+  color: $brand-orange;
+  margin-top: 50px;
+  text-align: center;
+  font: white;
+  letter-spacing: 1px;
+}
+
+.user-forms {
+  font-family: $body-font;
+  color: $brand-orange;
+  font-weight: 600;
+  width: 400px;
+  margin: 30px auto;
+  input {
+    border-radius: 25px;
+    border: 1px solid black;
+  }
+}
+
+.form-actions {
+  font-family: $body-font;
+  text-align: center;
+}
+
+.btn {
+  background-color: $brand-orange;
+  color: white;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.user-choices {
+  font-family: $body-font;
+  text-align: center;
+  margin-top: 50px;
+}
