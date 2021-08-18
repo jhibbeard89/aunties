@@ -7,14 +7,17 @@
   <p><%= @meal.description %></p>
 
   <h2>Price:</h2>
-  <p><%= @meal.price %></p>
+  <p>$<%= @meal.price %></p>
+
+  <h2>Quantity Available:</h2>
+  <p><%= @meal.quantity %> meals</p>
 </div>
 
-
+<div>
 <%= link_to "Book this meal", new_order_path(@meal) %><br>
-
-
-
 <%= link_to "Edit", edit_meal_path %><br>
 <%= link_to "Delete", meal_path(@meal), method: :delete, data: { confirm: "Are you sure?" } %><br><br>
 <%= link_to "<< Back to All Meals", meals_path %>
+</div>
+
+
