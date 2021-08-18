@@ -1,5 +1,9 @@
 <div class="section-container">
   <h3>Todays Lunches</h3>
+
+<%= link_to "View All Meals", meals_path %>
+<%= link_to "My Orders", my_orders_path(current_user) %>
+
   <section class="tile-view">
     <%= render 'tile' %>
     <%= render 'tile' %>
@@ -10,5 +14,3 @@
   <div class="info-box">
   </div>
 </div>
-<%# <%= link_to "My Orders", orders_path %><br>
-<%= link_to "Logout", destroy_user_session_path, method: :delete %><br>
