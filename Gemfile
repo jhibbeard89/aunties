@@ -38,6 +38,10 @@ gem 'simple_form'
 # Cloudinary
 gem 'cloudinary', '~> 1.20'
 
+# Faker
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+
 # ENV file
 gem 'dotenv-rails', groups: [:development, :test]
 

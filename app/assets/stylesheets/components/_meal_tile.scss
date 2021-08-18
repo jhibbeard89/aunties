@@ -1,22 +1,38 @@
 .tile-container {
+  font-family: $body-font;
   max-width: 250px;
-  box-shadow: 3px 3px 4px gray;
+  box-shadow: 0 3px 4px gray;
   margin: 15px 0;
   border-radius: 0;
+}
 
-  .meal-name {
-    margin: 0;
-    padding: 10px 5px;
-    font-size: 1.4rem;
-    background-color: $brand-yellow;
-    font-weight: 400;
-    color: $off-white;
+.image-container{
+  max-width: inherit;
+  position: relative;
+  .meal-image{
+    z-index: 10;
   }
 
-  .meal-image {
-    max-width: inherit;
+  .meal-order-button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
   }
 }
+
+
+.meal-name {
+  margin: 0;
+  padding: 10px 5px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.meal-image {
+  max-width: inherit;
+}
+
 
 .user-info {
   display: flex;
@@ -34,12 +50,13 @@
   width: 100%;
   padding: 10px;
   border: none;
-  background-color: $brand-yellow-dark;
+  background-color: $brand-orange-translucent;
   color: $off-white;
   border-radius: 0;
+  font-size: 1.3rem;
 
   &:hover {
-    background-color: $brand-yellow-darker;
+    background-color: $brand-orange;
     box-shadow: none;
     color: $off-white;
   }

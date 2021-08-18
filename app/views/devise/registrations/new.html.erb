@@ -1,10 +1,9 @@
-<h2>Sign up</h2>
+<h2 class="user-form-header">Please add your details and sign up with Auntie's</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    
+  <div class="form-inputs user-forms">
     <%= f.input :first_name,
                 required: true,
                 autofocus: true,
@@ -25,6 +24,8 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
+    <%= f.input :photo,
+                as: :file %>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -33,13 +34,11 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
 
-  <%= "Are you a diner or an Auntie?" %> 
+  <%= "Are you a diner or an Auntie?" %>
   <%= f.input :auntie, :as => :boolean, input_html: {checked: false} %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions" type="button" class="btn btn-light">
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
