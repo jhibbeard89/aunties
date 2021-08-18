@@ -5,19 +5,19 @@ class OrdersController < ApplicationController
     @order = Order.new
   end
 
-  def create 
+  def create
     @order = Order.new(order_params)
     @order.meal_id = @meal.id
     @order.user_id = current_user.id
 
     if @order.quantity > @meal.quantity
-      @error = "Your order exceeds the available order amount" 
+      @error = "Your order exceeds the available order amount"
       # redirect_to meal_path(@meal)
       # params[:order][:meal_id]
       render :new
     elsif @order.save!
-      redirect_to order_path(@order) 
-    end 
+      redirect_to order_path(@order)
+    end
     # end
 
     if @order.save!
@@ -29,6 +29,10 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @meal = Meal.find(@order.meal_id)
+  end
+
+  def my_orders
+    @orders = Order.where(user_id: current_user)
   end
 
   private
