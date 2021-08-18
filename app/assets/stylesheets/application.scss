@@ -26,9 +26,19 @@ p{
   font-family: $body-font;
 }
 
+h2{
+  margin: 0;
+}
+
 .brand-font-logo{
   font-family: $logo-font;
+  text-decoration: none;
+  color: black;
   font-size: 2rem;
   margin:0;
   letter-spacing: 7px;
+  &:hover{
+    color: black;
+    text-decoration: none;
+  }
 }
