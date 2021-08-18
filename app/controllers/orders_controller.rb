@@ -9,10 +9,20 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.meal_id = @meal.id
     @order.user_id = current_user.id
-    if @order.save! 
-        redirect_to order_path(@order)
-    # flash[:notice] = @order.errors.full_messages.to_sentence unless @order.save
-    # redirect_to order_path(@order)
+
+    if @order.quantity > @meal.quantity
+      @error = "Your order exceeds the available order amount" 
+      # redirect_to meal_path(@meal)
+      # params[:order][:meal_id]
+      render :new
+    elsif @order.save!
+      redirect_to order_path(@order) 
+    end 
+    # end
+
+    if @order.save!
+      new_quantity = @meal.quantity.to_i - @order.quantity.to_i
+      @meal.update(quantity: new_quantity)
     end
   end
 
