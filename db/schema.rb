@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_131115) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.time "pickup_time", default: "2000-01-01 13:26:14"
+    t.time "pickup_time", default: "2000-01-01 09:43:25"
     t.bigint "meal_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
