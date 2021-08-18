@@ -1,0 +1,13 @@
+<h3>Your Orders: </h3><br>
+
+<ul>
+  <% @orders.each do |order| %>
+    <li><%=Meal.find(order.meal_id).meal_name %><br>
+        Quantity: <%=order.quantity %><br>
+        Your total: EUR <%=order.quantity * Meal.find(order.meal_id).price%><br>
+        Pick-up: <%=order.pickup_time %><br><br>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "<< View All Meals", meals_path %>

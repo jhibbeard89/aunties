@@ -1,5 +1,9 @@
 <div class="section-container">
-  <h3 class=>Todays Meals</h3>
+<h3>Todays Lunches</h3>
+
+<%= link_to "View All Meals", meals_path %>
+<%= link_to "My Orders", my_orders_path(current_user) %>
+
   <section class="tile-view">
     <% @meals.each do |meal| %>
     <%# Temporary delete with render %>
@@ -21,3 +25,4 @@
     <div class="info-box">
     </div>
   </div>
+</div>
