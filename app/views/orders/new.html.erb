@@ -1,5 +1,8 @@
 <h2>Please enter your meal quantity</h2>
 <%= simple_form_for(@order)  do |f| %>
+<% if @error %>
+  <p><%= @error %></p>
+<% end %>
   <%= f.input :quantity %>
   <%= f.hidden_field :meal_id, value: params[:format]%>
 
