@@ -1,11 +1,9 @@
-.navbar-auntie {
-  justify-content: space-between;
-  background: white;
+.navigation{
+  background-color: $brand-green;
 }
 
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-auntie {
+  justify-content: space-between;
 }
 
 .navbar-auntie .navbar-collapse {
@@ -14,4 +12,8 @@
 
 .navbar-auntie .navbar-brand img {
   width: 40px;
+}
+
+.nav-links{
+  color: $off-white
 }
