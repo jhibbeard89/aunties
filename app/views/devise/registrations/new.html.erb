@@ -1,4 +1,4 @@
-<div class="form-background-image" style="background-image">
+<div class="form-background-image">
   <h2 class="user-form-header">Just one more step to enjoy fresh, homecooked food ...</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -26,7 +26,7 @@
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
       <%= f.input :photo,
-                  as: :file, class: "btn image-upload-button" %>
+                  as: :file, class: "btn btn-image-upload" %>
       <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -39,8 +39,8 @@
     <%= f.input :auntie, :as => :boolean, input_html: {checked: false} %>
     </div>
 
-    <div class="form-actions" type="button" class="btn btn-light">
-      <%= f.button :submit, "Sign up" %>
+    <div class="form-actions" type="button">
+      <%= f.button :submit, "Sign up", class: "btn btn-rounded" %>
     </div>
   <% end %>
 </div>

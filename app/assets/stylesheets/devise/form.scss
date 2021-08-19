@@ -36,10 +36,14 @@
   color: white;
   font-weight: 600;
   padding: 10px 30px;
+  margin-bottom: 30px;
+}
+
+.btn-rounded {
   border-radius: 75px;
 }
 
-.image-upload-button {
+.btn-image-upload {
   background-color: $brand-orange;
   color: white;
   font-weight: 600;
@@ -53,8 +57,16 @@
   text-align: center;
 }
 
+.form-group > input[type=file]::file-selector-button{
+  border: none;
+  background-color: $brand-orange;
+  color: white;
+  height: 100%;
+  font-family: $body-font;
+}
+
 .form-background-image {
-  height: 100vh;
+  height: 100%;
   background-image: image-url('background_image_alt.jpeg');
   background-position: center;
   background-size: cover;
