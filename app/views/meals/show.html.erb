@@ -7,7 +7,10 @@
   <p><%= @meal.description %></p>
 
   <h2>Price:</h2>
-  <p>$<%= @meal.price %></p>
+  <p>€ <%= @meal.price %></p>
+
+  <h2>Pick-up Location:</h2>
+  <p><%= @meal.address %></p>
 
   <h2>Quantity Available:</h2>
   <p><%= @meal.quantity %> meals</p>
