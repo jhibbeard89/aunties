@@ -6,7 +6,8 @@ class MealsController < ApplicationController
     @markers = @meals.geocoded.map do |meal|
       {
         lat: meal.latitude,
-        lng: meal.longitude
+        lng: meal.longitude,
+        info_window: render_to_string(partial: '/meals/info_window', locals: { meal: meal }),
       }
     end
   end
