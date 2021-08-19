@@ -7,13 +7,29 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+// Bootstrap
 import 'bootstrap';
+// Mapbox
+import { initMapbox } from '../plugins/init_mapbox';
+import 'mapbox-gl/dist/mapbox-gl.css';
+// Search Function
+import { initAutocomplete } from '../plugins/init_autocomplete';
+// Local Imports
 import {LogoTogal} from "../components/_header_scroll";
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  initAutocomplete();
+});
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your functions here, e.g:
+  initMapbox();
+});
 
 $(function() {
   const banner_exists = document.querySelector('#banner')

@@ -22,20 +22,22 @@
 @import "components/banner";
 
 
-h1, h2, h3, h4, h5, button, a{
+h1, h2, h3, h4, h5, button {
   font-family: $headers-font;
 }
+
 
 ul, li{
   margin: 0;
   padding: 0;
 }
 
-p{
+p, a {
   margin: 0;
   font-family: $body-font;
+  color: $brand-orange;
 }
 
-h2{
+h2 {
   margin: 0;
 }

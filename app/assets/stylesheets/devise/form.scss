@@ -1,21 +1,27 @@
 .user-form-header {
   font-family: $body-font;
-  color: $brand-orange;
-  margin-top: 50px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 2px;
   text-align: center;
-  font: white;
-  letter-spacing: 1px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-shadow: 0 0.5px 0.5px black;
 }
 
 .user-forms {
   font-family: $body-font;
-  color: $brand-orange;
-  font-weight: 600;
+  color: white;
+  font-weight: 400;
+  text-shadow: 0 0.5px 0.5px black;
   width: 400px;
-  margin: 30px auto;
+  margin: auto;
+  padding-top: 10px;
+  margin-bottom: 30px;
   input {
-    border-radius: 25px;
-    border: 1px solid black;
+    border-radius: 8px;
+    border: 1px solid white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   }
 }
 
@@ -29,10 +35,46 @@
   color: white;
   font-weight: 600;
   padding: 10px 30px;
+  margin-bottom: 30px;
+  opacity: 0.88;
 }
 
-.user-choices {
-  font-family: $body-font;
+.btn-rounded {
+  border-radius: 75px !important;
+}
+
+.bottom-links {
   text-align: center;
-  margin-top: 50px;
+  color: $brand-orange;
+  :hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.form-group > input[type=file]::file-selector-button{
+  border: none;
+  background-color: $brand-orange;
+  color: white;
+  height: 100%;
+  font-family: $body-font;
+}
+
+.form-background-image {
+  height: 100vh;
+  background-image: image-url('background_image_alt.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.form-control:focus{
+border: 1px solid $brand-orange !important;
+box-shadow: 0 0 3px $brand-orange !important;
+-moz-box-shadow: 0 0 3px $brand-orange !important;
+-webkit-box-shadow: 0 0 3px $brand-orange !important;
+}
+
+.form-check-label {
+  height: 0
 }
