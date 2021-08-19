@@ -48,10 +48,10 @@
 }
 
 .form-background-image {
-  height: 100vh;
   background-image: image-url('background_image_alt.jpeg');
-  background-position: center;
+  // background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
