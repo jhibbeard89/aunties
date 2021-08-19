@@ -4,7 +4,6 @@ class Meal < ApplicationRecord
 
   validates :meal_name, :category, presence: true
   validates :price, presence: true, numericality: { only_integer: true }
-  validates :quantity, presence: true, numericality: { only_integer: true }
-
+  validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validates :description, presence: true, length: { maximum: 255 }
 end

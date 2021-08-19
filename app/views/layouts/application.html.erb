@@ -38,7 +38,7 @@
         <% end %>
 
           <li class="nav-item dropdown">
-            <%= image_tag "aunties_avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle" if current_user%>
           </li>
         </ul>
       </div>
