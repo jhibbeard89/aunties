@@ -1,9 +1,9 @@
 <div class="form-background-image">
-  <h2 class="user-form-header">Please update your meal details below:</h2>
+
+  <h2 class="user-form-header">Please fill in the forms below:</h2>
+
     <div class="container">
-
       <%= simple_form_for(meal)  do |f| %>
-
         <div class="form-inputs user-forms">
           <%= f.input :meal_name %>
           <%= f.input :category %>
@@ -16,6 +16,8 @@
         <div class="d-flex justify-content-center">
           <%= f.submit class: "btn btn-rounded border-0" %>
         </div>
+
       <% end %>
     </div>
+
 </div>
