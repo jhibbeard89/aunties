@@ -6,17 +6,21 @@
 <% end %>
 
   <section class="tile-view">
-    <% @meals.each do |meal| %>
+    <% @meals.first(3).each do |meal| %>
     <%# Temporary delete with render %>
       <div class="tile-container">
         <h5 class="meal-name"><%= meal.meal_name %></h5>
         <div class="image-container">
+        <% if meal.photo.attached? %>
           <%= cl_image_tag meal.photo.key, class: "meal-image" %>
-          <button class="btn meal-order-button">Order now</button>
+        <% else %>
+          <%= cl_image_tag "https://res.cloudinary.com/dz9aqljih/image/upload/v1629377182/Aunties_stock_images/stock_wfzixd.jpg", class: "meal-image" %>
+        <% end %>
+        <%= link_to "Order now", meal_path(meal),  class: "btn meal-order-button" %>
         </div>
         <div class="user-info">
           <p class="user-name">Auntie <%= meal.user.first_name %></p>
-          <p class="user-price"><%= meal.price %></p>
+          <p class="user-price"><%= meal.price %>.00€</p>
         </div>
       </div>
     <% end %>
@@ -27,4 +31,3 @@
     </div>
   </div>
 </div>
-
