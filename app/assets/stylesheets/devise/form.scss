@@ -21,7 +21,6 @@
   input {
     border-radius: 8px;
     border: 1px solid white;
-    height: 40px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   }
 }
@@ -37,6 +36,7 @@
   font-weight: 600;
   padding: 10px 30px;
   margin-bottom: 30px;
+  opacity: 0.88;
 }
 
 .btn-rounded {
@@ -68,7 +68,13 @@
   background-position: center;
 }
 
-.form-check-input{
-  width: 25px;
-  height: 25px;
+.form-control:focus{
+border: 1px solid $brand-orange !important;
+box-shadow: 0 0 3px $brand-orange !important;
+-moz-box-shadow: 0 0 3px $brand-orange !important;
+-webkit-box-shadow: 0 0 3px $brand-orange !important;
+}
+
+.form-check-label {
+  height: 0
 }
