@@ -26,7 +26,7 @@
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
       <%= f.input :photo,
-                  as: :file %>
+                  as: :file, class: "btn image-upload-button" %>
       <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
