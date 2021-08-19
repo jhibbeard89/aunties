@@ -1,4 +1,6 @@
 .navigation{
+  display: flex;
+  align-items: center;
   z-index: 100;
   justify-content: space-between;
   background-color: $brand-green;
@@ -10,20 +12,12 @@
   display: none;
 }
 
-.user-avatar{
-  width: 30px;
-}
-
 .navbar-auntie .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-auntie .navbar-brand img {
   width: 40px;
-}
-
-.nav-links{
-  color: $off-white
 }
 
 .brand-font-logo {
@@ -36,7 +30,7 @@
   letter-spacing: 7px;
 
   &:hover {
-    color: black;
+    color: $brand-orange;
     text-decoration: none;
   }
 }

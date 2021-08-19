@@ -14,4 +14,15 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-LogoTogal();
+
+$(function() {
+  const banner_exists = document.querySelector('#banner')
+  const header_logo = document.querySelector('#logo');
+  const header_links = document.querySelector('#links')
+  console.log(banner_exists)
+  if (banner_exists) {
+    header_logo.classList.add('hidden')
+    header_links.classList.add('hidden')
+  }
+  LogoTogal();
+})

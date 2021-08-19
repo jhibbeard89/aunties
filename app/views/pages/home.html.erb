@@ -1,13 +1,33 @@
-<div class="banner">
-  <h1>Welcome to <span class="brand-font-logo">Aunties</span></h1>
-  <p>Choose an Auntie nearby and enjoy a fresh, homecooked meal</p>
+<div class="banner" id="banner">
+  <div class="embedded-menu-bar">
+    <ul>
+      <% if current_user %>
+          <li class="user-nav-links">
+            <span>
+              <%= current_user.first_name %>
+            </span>
+          </li>
+          <li class="user-nav-links"><%= link_to "View All Meals", meals_path, class: "btn btn-inverse" %></li>
+          <li class="user-nav-links"><%= link_to "My Orders", my_orders_path(current_user), class: "btn btn-inverse" %></li>
+          <li class="user-nav-links">
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-inverse btn-logout" %>
+          </li>
+        <% else %>
+          <li class="user-nav-links">
+            <%= link_to "Login", new_user_session_path, class: "btn btn-inverse" %>
+          </li>
+          <li class="user-nav-links">
+            <%= link_to "Registration", new_user_registration_path, class: "btn btn-inverse" %>
+          </li>
+        <% end %>
+    </ul>
+  </div>
+  <div class="site-info">
+    <h1>Welcome to <span class="brand-font-logo">Aunties</span></h1>
+    <p>Choose an Auntie nearby and enjoy a fresh, homecooked meal</p>
+  </div>
 </div>
 <div class="section-container">
-<h3>Todays Lunches</h3>
-<% if current_user %>
-  <%= link_to "View All Meals", meals_path %>
-  <%= link_to "My Orders", my_orders_path(current_user) %>
-<% end %>
 
   <section class="tile-view">
     <% @meals.first(3).each do |meal| %>
