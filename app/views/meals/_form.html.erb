@@ -1,11 +1,23 @@
-<%= simple_form_for(meal)  do |f| %>
-  <%= f.input :meal_name %>
-  <%= f.input :category %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :address %>
-  <%= f.input :quantity %>
-  <%= f.input :photo, as: :file %>
+<div class="form-background-image">
 
-  <%= f.submit %>
-<% end %>
+  <h2 class="user-form-header">Please fill in the forms below:</h2>
+
+    <div class="container">
+      <%= simple_form_for(meal)  do |f| %>
+        <div class="form-inputs user-forms">
+          <%= f.input :meal_name %>
+          <%= f.input :category %>
+          <%= f.input :description %>
+          <%= f.input :price %>
+          <%= f.input :quantity %>
+          <%= f.input :photo, as: :file %>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <%= f.submit class: "btn btn-rounded border-0" %>
+        </div>
+
+      <% end %>
+    </div>
+
+</div>

@@ -1,44 +1,45 @@
-<h2 class="user-form-header">Please add your details and sign up with Auntie's</h2>
+<div class="form-background-image">
+  <h2 class="user-form-header">Just one more step to enjoy fresh, homecooked food ...</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs user-forms">
+      <%= f.input :first_name,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "first-name" }%>
+      <%= f.input :last_name,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "last-name" }%>
+      <%= f.input :address,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "address" }%>
+      <%= f.input :phone_number,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "phone-number" }%>
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" }%>
+      <%= f.input :photo,
+                  as: :file, class: "btn btn-image-upload" %>
+      <%= f.input :password,
+                  required: true,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password" } %>
 
-  <div class="form-inputs user-forms">
-    <%= f.input :first_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "first-name" }%>
-    <%= f.input :last_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "last-name" }%>
-    <%= f.input :address,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "address", id: "user_address" }%>
-    <%= f.input :phone_number,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "phone-number" }%>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :photo,
-                as: :file %>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+    <%= "Are you registering as an Auntie?" %>
+    <%= f.input :auntie, :as => :boolean, input_html: {checked: false}  %>
+    </div>
 
-  <%= "Are you a diner or an Auntie?" %>
-  <%= f.input :auntie, :as => :boolean, input_html: {checked: false} %>
-  </div>
-
-  <div class="form-actions" type="button" class="btn btn-light">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+    <div class="form-actions" type="button">
+      <%= f.button :submit, "Sign up", class: "btn btn-rounded" %>
+    </div>
+  <% end %>
+</div>
