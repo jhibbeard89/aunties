@@ -1,0 +1,50 @@
+.btn {
+  background-color: $brand-orange;
+  color: white;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+.btn-inverse{
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1px solid $brand-orange;
+  color: $brand-orange;
+  padding: 0 3px;
+  border-radius: 0;
+  &:hover{
+    color: $off-white;
+    background-color: $brand-orange;
+    border-radius: 2px;
+  }
+}
+
+.user-nav-links {
+  display: inline-block;
+  text-decoration: none;
+  margin: 10px 10px;
+  padding: 0;
+}
+
+.navbar-links a{
+  color: black;
+  border-bottom-color: black;
+  &:hover{
+    border-bottom-color: $brand-orange;
+  }
+}
+
+.btn-logout {
+  &:hover {
+    background-color: $brand-green;
+    border-bottom-color: $brand-green;
+  }
+}
+
+.navbar-links {
+  color: $off-white;
+
+  .btn-logout:hover {
+    color: $brand-green;
+    background-color: $off-white;
+    border-bottom-color: $off-white;
+  }
+}

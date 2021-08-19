@@ -1,0 +1,38 @@
+$url: 'https://res.cloudinary.com/dz9aqljih/image/upload/v1629382452/Aunties_stock_images/hompage_background_img_aacbum.jpg';
+
+.banner{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 45px auto;
+  min-height: 350px;
+  background: linear-gradient(0deg, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.4)),
+  url($url);
+  padding: 0 0 0 100px;
+  background-size:cover;
+  background-position: center;
+  background-size: cover;
+  &, span{
+    color: white;
+  }
+  span:hover{
+    color: $brand-orange;
+  }
+  h1 {
+    margin: 45px 0 0 0;
+    .brand-font-logo{
+      font-size: 4.0rem;
+    }
+  }
+  p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-left: 25px;
+  }
+}
+
+.embedded-menu-bar {
+  text-align: right;
+  margin-right: 35px;
+  grid-column: 2;
+}
