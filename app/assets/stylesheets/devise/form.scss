@@ -1,17 +1,19 @@
 .user-form-header {
   font-family: $body-font;
-  color: $brand-orange;
+  color: white;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-shadow: 0 0.5px 0.5px black;
 }
 
 .user-forms {
   font-family: $body-font;
   color: white;
-  font-weight: 800;
+  font-weight: 400;
+  text-shadow: 0 0.5px 0.5px black;
   width: 400px;
   margin: auto;
   padding-top: 10px;
@@ -35,19 +37,17 @@
   color: white;
   font-weight: 600;
   padding: 10px 30px;
+  border-radius: 75px;
 }
 
 .user-choices {
   font-family: $body-font;
   color: $brand-orange;
   text-align: center;
-  hover {
-
-  }
 }
 
 .form-background-image {
-  background-image: image-url('background_image.jpeg'), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+  background-image: image-url('background_image_alt.jpeg');
   background-position: center;
   background-size: cover;
   background-position: center;
