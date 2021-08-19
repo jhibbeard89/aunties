@@ -13,6 +13,14 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+
+import { initAutocomplete } from '../plugins/init_autocomplete';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  initAutocomplete();
+});
+
 // External imports
 import "bootstrap";
 
@@ -24,3 +32,4 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initMapbox();
 });
+
