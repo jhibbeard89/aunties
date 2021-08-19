@@ -15,11 +15,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 // Search Function
 import { initAutocomplete } from '../plugins/init_autocomplete';
 // Local Imports
-import {LogoTogal} from "../components/_header_scroll";
-
-Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
+import {LogoTogal} from "../plugins/init_header_scroll";
+import {background_page_height} from "../plugins/init_background_height";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
@@ -32,6 +29,7 @@ document.addEventListener('turbolinks:load', () => {
 });
 
 $(function() {
+  background_page_height()
   const banner_exists = document.querySelector('#banner')
   const header_logo = document.querySelector('#logo');
   const header_links = document.querySelector('#links')
@@ -41,7 +39,8 @@ $(function() {
     LogoTogal();
   }
 
-  const page_height = window.innerHeight
-  console.log(page_height)
-  document.getElementById('background-image').style.height = `${page_height}px`;
+
+  Rails.start()
+  // Turbolinks.start()
+  ActiveStorage.start()
 })
