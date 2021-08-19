@@ -2,6 +2,14 @@ class MealsController < ApplicationController
 
   def index
     @meals = Meal.all
+
+    @markers = @meals.geocoded.map do |meal|
+      {
+        lat: meal.latitude,
+        lng: meal.longitude,
+        info_window: render_to_string(partial: '/meals/info_window', locals: { meal: meal }),
+      }
+    end
   end
 
   def show
@@ -44,7 +52,7 @@ class MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:meal).permit(:meal_name, :category, :price, :description, :quantity, :photo)
+    params.require(:meal).permit(:meal_name, :category, :price, :description, :quantity, :photo, :address)
   end
 
 end
