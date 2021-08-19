@@ -1,0 +1,8 @@
+$url: 'https://res.cloudinary.com/dz9aqljih/image/upload/v1629382452/Aunties_stock_images/hompage_background_img_aacbum.jpg';
+
+.banner{
+  min-height: 250px;
+  background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)),
+  url($url);
+  background-size:cover;
+}
