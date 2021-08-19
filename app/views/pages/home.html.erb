@@ -1,1 +1,30 @@
-<h3>The Welcome page</h3>
+<div class="section-container">
+<h3>Todays Lunches</h3>
+<% if current_user %>
+  <%= link_to "View All Meals", meals_path %>
+  <%= link_to "My Orders", my_orders_path(current_user) %>
+<% end %>
+
+  <section class="tile-view">
+    <% @meals.each do |meal| %>
+    <%# Temporary delete with render %>
+      <div class="tile-container">
+        <h5 class="meal-name"><%= meal.meal_name %></h5>
+        <div class="image-container">
+          <%= cl_image_tag meal.photo.key, class: "meal-image" %>
+          <button class="btn meal-order-button">Order now</button>
+        </div>
+        <div class="user-info">
+          <p class="user-name">Auntie <%= meal.user.first_name %></p>
+          <p class="user-price"><%= meal.price %></p>
+        </div>
+      </div>
+    <% end %>
+  </section>
+
+
+    <div class="info-box">
+    </div>
+  </div>
+</div>
+
