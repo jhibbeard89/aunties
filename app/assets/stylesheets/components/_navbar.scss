@@ -1,14 +1,17 @@
 .navigation{
   z-index: 100;
   justify-content: space-between;
-  height: 80px;
   background-color: $brand-green;
   position: sticky;
   top: 0;
 }
 
+.hidden{
+  display: none;
+}
+
 .user-avatar{
-  width: 60px;
+  width: 30px;
 }
 
 .navbar-auntie .navbar-collapse {
