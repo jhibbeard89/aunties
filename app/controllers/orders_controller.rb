@@ -9,11 +9,10 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.meal_id = @meal.id
     @order.user_id = current_user.id
+    @order.pickup_time = DateTime.now + (1 / 24.0)
 
     if @order.quantity > @meal.quantity
-      @error = "Your order exceeds the available order amount"
-      # redirect_to meal_path(@meal)
-      # params[:order][:meal_id]
+      @error = 'Your order exceeds the available order amount'
       render :new
     elsif @order.save!
       redirect_to order_path(@order)
