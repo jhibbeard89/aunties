@@ -100,12 +100,4 @@ meal = Meal.new(
   meal.photo.attach(io: file, filename: 'beefstew.jpg', content_type: 'image/jpg')
   meal.save
 
-
-# file = URI.open()
-# meal = Meal.create([
-#   meal_name: ,
-#   category: meals[ran_number],
-#   description: ,
-#   user_id:
-#   ])
-#   meal.photo.attach(file)
+puts "Goodbye"
