@@ -13,9 +13,23 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+
 import { initAutocomplete } from '../plugins/init_autocomplete';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initAutocomplete();
 });
+
+// External imports
+import "bootstrap";
+
+// Internal imports, e.g:
+import { initMapbox } from '../plugins/init_mapbox';
+import 'mapbox-gl/dist/mapbox-gl.css';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your functions here, e.g:
+  initMapbox();
+});
+

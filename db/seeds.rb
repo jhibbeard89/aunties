@@ -6,8 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
-
 puts "hello"
+puts "Lets clear your db"
+Meal.delete_all
+puts "Meals are deleted"
+User.delete_all
+puts "Users are deleted"
+
+puts "Let's seed"
 # User Seeds
 file = URI.open('https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg')
 user = User.new(
