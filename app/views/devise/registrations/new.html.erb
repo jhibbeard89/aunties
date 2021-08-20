@@ -48,12 +48,12 @@
                   label: false,
                   placeholder: "Password",
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password", class: "form-input-field" } %>
       <%= f.input :password_confirmation,
                   required: true,
                   label: false,
                   placeholder: "Repeat Password",
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password", class: "form-input-field" } %>
 
     <%= "Are you registering as an Auntie?" %>
     <%= f.input :auntie, :as => :boolean, input_html: {checked: false}  %>
