@@ -1,13 +1,19 @@
-<h3>Your Orders: </h3><br>
+<div class="container" class="order-details-font">
+  <h3 class="orders-header-text">Your Orders: </h3><br>
 
-<ul>
-  <% @orders.each do |order| %>
-    <li><%=Meal.find(order.meal_id).meal_name %><br>
-        Quantity: <%=order.quantity %><br>
-        Your total: EUR <%=order.quantity * Meal.find(order.meal_id).price%><br>
-        Pick-up: <%=order.pickup_time %><br><br>
-    </li>
-  <% end %>
-</ul>
+  <div class="orders-body-text">
+    <ul>
+      <% @orders.each do |order| %>
+        <li><%=Meal.find(order.meal_id).meal_name %><br>
+            Quantity: <%=order.quantity %><br>
+            Your total: EUR <%=order.quantity * Meal.find(order.meal_id).price%><br>
+            Pick-up: <%=order.pickup_time %><br><br>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 
-<%= link_to "<< View All Meals", meals_path %>
+  <div class="btn-back">
+  <%= link_to "View All Meals", meals_path, class: "btn btn-rounded" %>
+  </div>
+</div>
