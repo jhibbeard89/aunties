@@ -1,12 +1,20 @@
 <h2>Here are your order details:</h2>
 
-<h3>Your <%= @meal.meal_name %> will be ready for pick-up at: <%= @order.pickup_time %></h3>
 
-<h3>Number of meals: <%= @order.quantity %></h3>
 
-<h3>Your total is: $<%= @order.quantity * @meal.price %></h3>
 
 <%= link_to "<< Back to Meals", meals_path(@meal) %><br>
 
-
-
+    <div class="order-card">
+      <img src= @meal.photo>
+      <div class="info">
+        <div>
+          <h2>Your Order</h2>
+          <h3>Your <%= @meal.meal_name %> will be ready for pick-up at: <%= @order.pickup_time %></h3>
+          <p>Number of meals: <%= @order.quantity %>
+            Your total is: $<%= @order.quantity * @meal.price %></p>
+        </div>
+        <img src=@user.>
+        <h3></h3>
+      </div>
+    </div>

@@ -3,11 +3,23 @@
 <ul>
   <% @orders.each do |order| %>
     <li><%=Meal.find(order.meal_id).meal_name %><br>
-        Quantity: <%=order.quantity %><br>
-        Your total: EUR <%=order.quantity * Meal.find(order.meal_id).price%><br>
-        Pick-up: <%=order.pickup_time %><br><br>
+    <div class="order-card">
+      <%= cl_image_tag order.meal.photo.key, class: "cover"%>
+      <div class="info">
+        <div>
+          <h3>Your Order</h3>
+          <h2>Your <%= order.meal.meal_name %> will be ready for pick-up at: <%= order.pickup_time %></h2>
+          <p>Number of meals: <%= order.quantity %>
+            Your total is: $<%= order.quantity * order.meal.price %></p>
+        </div>
+        <%= cl_image_tag @user.photo.key, class: "avatar" %>
+        <h3></h3>
+      </div>
+    </div>
     </li>
   <% end %>
 </ul>
 
+
 <%= link_to "<< View All Meals", meals_path %>
+
