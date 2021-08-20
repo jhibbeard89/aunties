@@ -1,24 +1,33 @@
-<h3>Here are the meal details for <%= @meal.meal_name %>: </h3>
+<h3 class="user-form-header" id="order-heading">Here are the meal details for <%= @meal.meal_name %>: </h3>
+
+    <div class="order-card-2">
+      <%= cl_image_tag @meal.photo.key, class: "cover"%>
+      <div class="info">
+      <div>
+        <h2>Category:</h2>
+        <p><%= @meal.category %></p>
+
+        <h2>Description:</h2>
+        <p><%= @meal.description %></p>
+
+        <h2>Price:</h2>
+        <p>€ <%= @meal.price %></p>
+
+        <h2>Pick-up Location:</h2>
+        <p><%= @meal.address %></p>
+
+        <h2>Quantity Available:</h2>
+        <p><%= @meal.quantity %> meals</p>
+         
+       </div>
+       
+      </div>
+    </div>
+    
+
 <div>
-  <h2>Category:</h2>
-  <p><%= @meal.category %></p>
-
-  <h2>Description:</h2>
-  <p><%= @meal.description %></p>
-
-  <h2>Price:</h2>
-  <p>€ <%= @meal.price %></p>
-
-  <h2>Pick-up Location:</h2>
-  <p><%= @meal.address %></p>
-
-  <h2>Quantity Available:</h2>
-  <p><%= @meal.quantity %> meals</p>
-</div>
-
-<div>
-<%= link_to "Book this meal", new_order_path(@meal) %><br>
-<%= link_to "Edit", edit_meal_path %><br>
-<%= link_to "Delete", meal_path(@meal), method: :delete, data: { confirm: "Are you sure?" } %><br><br>
-<%= link_to "<< Back to All Meals", meals_path %>
+<%= link_to "Book this meal", new_order_path(@meal), class: "btn" %><br>
+<%= link_to "Edit", edit_meal_path, class: "btn" %><br>
+<%= link_to "Delete", meal_path(@meal), method: :delete, data: { confirm: "Are you sure?" }, class: "btn" %><br><br>
+<%= link_to "<< Back to All Meals", meals_path, class: "btn" %>
 </div>
