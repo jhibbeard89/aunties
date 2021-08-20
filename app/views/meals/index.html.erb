@@ -1,7 +1,8 @@
+<h3 class="meals-header-text">Here are the meals available today: </h3>
+<%= link_to "Add a new meal", new_meal_path, class: "btn quickfix1"%>
+
 <div class="grid-body">
   <div class="column-left">
-    <h3 class="meals-header-text">Here are the meals available today: </h3>
-    <%= link_to "Add a new meal", new_meal_path, class: "btn" %>
       <section class="tile-view flex-body">
         <% @meals.each do |meal| %>
         <%# Temporary delete with render %>

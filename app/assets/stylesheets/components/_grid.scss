@@ -10,6 +10,8 @@
   .column-right{
     grid-row: 1;
     grid-column: 2;
+    margin-top: 0;
+    padding: 8px;
   }
 }
 
@@ -19,4 +21,8 @@
   flex-direction: row;
   flex-wrap: warp;
   justify-content: flex-start;
+}
+
+.quickfix1{
+  margin-left: 5px;
 }
