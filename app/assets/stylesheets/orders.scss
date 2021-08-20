@@ -1,3 +1,36 @@
 // Place all the styles related to the orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.orders-header-text {
+  font-family: $body-font;
+  color: $brand-orange;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-shadow: 0 0.5px 0.5px white;
+}
+
+.orders-body-text {
+  font-family: $body-font;
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.btn-container {
+  padding: 30px 30px;
+  text-align: center;
+}
+
+.map-container {
+  padding: 30px 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}

@@ -1,15 +1,33 @@
-<h3>Here Are All Available Meals: </h3>
+<h3 class="meals-header-text">Here are the meals available today: </h3>
 
-<ul>
-  <% @meals.each do |meal| %>
-    <li><%=link_to meal.meal_name, meal_path(meal) %></li>
-  <% end %>
-</ul>
+  <section class="tile-view">
+    <% @meals.each do |meal| %>
+    <%# Temporary delete with render %>
+      <div class="tile-container">
+        <h5 class="meal-name"><%= meal.meal_name %></h5>
+        <div class="image-container">
+        <% if meal.photo.attached? %>
+          <%= cl_image_tag meal.photo.key, class: "meal-image" %>
+        <% else %>
+          <%= cl_image_tag "https://res.cloudinary.com/dz9aqljih/image/upload/v1629377182/Aunties_stock_images/stock_wfzixd.jpg", class: "meal-image" %>
+        <% end %>
+        <%= link_to "Order now", meal_path(meal),  class: "btn meal-order-button" %>
+        </div>
+        <div class="user-info">
+          <p class="user-name">Auntie <%= meal.user.first_name %></p>
+          <p class="user-price"><%= meal.price %>.00€</p>
+        </div>
+      </div>
+    <% end %>
 
-<%= link_to "Add a new meal", new_meal_path %>
+<div class="container btn-container">
+  <%= link_to "Add a new meal", new_meal_path, class: "btn" %>
 <br>
+</div>
 
-<div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<div class="container map-container">
+  <div id="map"
+      style="width: 100%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+</div>

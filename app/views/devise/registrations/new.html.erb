@@ -7,32 +7,54 @@
       <%= f.input :first_name,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "first-name" }%>
+                  label: false,
+                  placeholder: "First name",
+                  input_html: {
+                    autocomplete: "first-name",
+                    class: "form-input-field" }%>
       <%= f.input :last_name,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "last-name" }%>
+                  label: false,
+                  placeholder: "Last name",
+                  input_html: { autocomplete: "last-name",
+                  class: "form-input-field" }%>
       <%= f.input :address,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "address", id: "user_address" }%>
+                  label: false,
+                  placeholder: "Address",
+                  input_html: { autocomplete: "address", id: "user_address",
+                  class: "form-input-field" }%>
       <%= f.input :phone_number,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "phone-number" }%>
+                  label: false,
+                  placeholder: "Phone number",
+                  input_html: { autocomplete: "phone-number",
+                  class: "form-input-field" }%>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "email" }%>
+                  label: false,
+                  placeholder: "E-mail",
+                  input_html: { autocomplete: "email",
+                  class: "form-input-field" }%>
       <%= f.input :photo,
-                  as: :file, class: "btn btn-image-upload" %>
+                  as: :file,
+                  label: false,
+                  inner_html: {class: "btn btn-image-upload form-input-field"} %>
       <%= f.input :password,
                   required: true,
+                  label: false,
+                  placeholder: "Password",
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password", class: "form-input-field" } %>
       <%= f.input :password_confirmation,
                   required: true,
-                  input_html: { autocomplete: "new-password" } %>
+                  label: false,
+                  placeholder: "Repeat Password",
+                  input_html: { autocomplete: "new-password", class: "form-input-field" } %>
 
     <%= "Are you registering as an Auntie?" %>
     <%= f.input :auntie, :as => :boolean, input_html: {checked: false}  %>

@@ -1,8 +1,12 @@
 .btn {
-  background-color: $brand-orange;
+  background-color: $brand-orange-translucent;
   color: white;
   font-weight: 600;
   padding: 10px 30px;
+  &:hover{
+    color: $off-white;
+    background-color: $brand-orange;
+  }
 }
 .btn-inverse{
   background-color: rgba(0, 0, 0, 0);
@@ -58,4 +62,8 @@
   &:hover{
     color: $brand-orange;
   }
+}
+
+.btn-back {
+  text-align: center;
 }

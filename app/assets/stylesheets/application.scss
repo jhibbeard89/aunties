@@ -14,6 +14,9 @@
 // Devise components
 @import "devise/form";
 
+@import "meals";
+@import "orders";
+
 // Your CSS partials
 @import "components/buttons";
 @import "components/navbar";
@@ -24,7 +27,6 @@
 @import "components/showorders";
 
 
-
 html, body {
   min-height: 100vh;
 }
@@ -32,7 +34,6 @@ html, body {
 h1, h2, h3, h4, h5, button {
   font-family: $headers-font;
 }
-
 
 ul, li{
   margin: 0;
@@ -46,4 +47,11 @@ p, a {
 
 h2 {
   margin: 0;
+}
+
+.grid-center{
+  text-align: center;
+  .btn{
+    margin-top: 25px;
+  }
 }
