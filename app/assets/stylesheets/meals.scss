@@ -1,3 +1,13 @@
 // Place all the styles related to the meals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.meals-header-text {
+  color: $brand-orange;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-shadow: 0 0.5px 0.5px white;
+}

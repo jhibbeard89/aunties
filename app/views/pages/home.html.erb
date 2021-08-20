@@ -28,9 +28,8 @@
   </div>
 </div>
 <div class="section-container">
-
   <section class="tile-view">
-    <% @meals.first(3).each do |meal| %>
+    <% @meals.first(4).each do |meal| %>
     <%# Temporary delete with render %>
       <div class="tile-container">
         <h5 class="meal-name"><%= meal.meal_name %></h5>
