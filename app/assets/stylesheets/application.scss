@@ -14,10 +14,7 @@
 // Devise components
 @import "devise/form";
 
-// Meals components
 @import "meals";
-
-// Orders components
 @import "orders";
 
 // Your CSS partials
@@ -50,4 +47,11 @@ p, a {
 
 h2 {
   margin: 0;
+}
+
+.grid-center{
+  text-align: center;
+  .btn{
+    margin-top: 25px;
+  }
 }

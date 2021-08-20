@@ -1,21 +1,16 @@
 <h2 class="user-form-header" id="order-heading">Here are your order details:</h2>
 <br><br>
 
- 
-   
     <div class="order-card">
       <%= cl_image_tag @order.meal.photo.key, class: "cover"%>
       <div class="info">
-      
-          
-          <h3>Your <%= @meal.meal_name %> will be ready for pick-up at: <%= @order.pickup_time %><br><br>
+
+
+          <h3>Your <%= @meal.meal_name %> will be ready for pick-up at: <%= @order.pickup_time.strftime('%H') %><br><br>
           Number of meals: <%= @order.quantity %><br><br>
           Your total is: $<%= @order.quantity * @meal.price %></h3>
-         
-       
-       
       </div>
     </div>
-    
-  
+
+
 <%= link_to "<< Back to Meals", meals_path(@meal) %><br>
