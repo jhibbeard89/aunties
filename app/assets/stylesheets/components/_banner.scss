@@ -30,9 +30,12 @@ $url: 'https://res.cloudinary.com/dz9aqljih/image/upload/v1629382452/Aunties_sto
     margin-left: 25px;
   }
 }
-
 .embedded-menu-bar {
+  grid-column: 1 / span 2;
   text-align: right;
   margin-right: 35px;
-  grid-column: 2;
+}
+
+.site-info{
+  grid-column: 1 / span 2;
 }
