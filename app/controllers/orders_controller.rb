@@ -32,6 +32,8 @@ class OrdersController < ApplicationController
 
   def my_orders
     @orders = Order.where(user_id: current_user)
+    @user = current_user
+    
   end
 
   private

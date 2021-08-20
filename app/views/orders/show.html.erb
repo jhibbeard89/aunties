@@ -1,11 +1,21 @@
-<div class="container" class="order-details-font">
+<h2 class="user-form-header" id="order-heading">Here are your order details:</h2>
+<br><br>
 
-  <h2 class="orders-header-text">Here are your order details:</h2>
-
-  <div class="orders-body-text">
-    <h3>Your <%= @meal.meal_name %> will be ready for pick-up at: <%= @order.pickup_time %></h3>
-    <h3>Number of meals: <%= @order.quantity %></h3>
-    <h3>Your total is: $<%= @order.quantity * @meal.price %></h3>
-    <%= link_to "Back to Meals", meals_path(@meal), class: "btn btn-rounded" %><br>
-  </div>
-</div>
+ 
+   
+    <div class="order-card">
+      <%= cl_image_tag @order.meal.photo.key, class: "cover"%>
+      <div class="info">
+      
+          
+          <h3>Your <%= @meal.meal_name %> will be ready for pick-up at: <%= @order.pickup_time %><br><br>
+          Number of meals: <%= @order.quantity %><br><br>
+          Your total is: $<%= @order.quantity * @meal.price %></h3>
+         
+       
+       
+      </div>
+    </div>
+    
+  
+<%= link_to "<< Back to Meals", meals_path(@meal) %><br>
