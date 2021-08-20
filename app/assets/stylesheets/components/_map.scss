@@ -6,3 +6,11 @@
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+
+#map {
+  -ms-flex-align: center;
+  width: 80%;
+  height: 600px;
+  margin: auto;
+  border: solid 10px $brand-green
+}

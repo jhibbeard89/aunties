@@ -23,14 +23,13 @@
     </ul>
   </div>
   <div class="site-info">
-    <h1>Welcome to <span class="brand-font-logo">Aunties</span></h1>
+    <h1>Welcome to <span class="brand-font-logo">Auntie's</span></h1>
     <p>Choose an Auntie nearby and enjoy a fresh, homecooked meal</p>
   </div>
 </div>
 <div class="section-container">
-
   <section class="tile-view">
-    <% @meals.first(3).each do |meal| %>
+    <% @meals.first(4).each do |meal| %>
     <%# Temporary delete with render %>
       <div class="tile-container">
         <h5 class="meal-name"><%= meal.meal_name %></h5>
