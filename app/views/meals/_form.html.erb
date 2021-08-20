@@ -5,14 +5,30 @@
     <div class="container">
       <%= simple_form_for(meal)  do |f| %>
         <div class="form-inputs user-forms">
-          <%= f.input :meal_name %>
-          <%= f.input :category %>
-          <%= f.input :description %>
+          <%= f.input :meal_name,
+            label: false,
+            placeholder: "Meal name",
+            input_html: {class: "form-input-field"} %>
+          <%= f.input :category,
+            label: false,
+            placeholder: "Category",
+            input_html: {class: "form-input-field"} %>
+          <%= f.input :description,
+            label: false,
+            placeholder: "Description",
+            input_html: {class: "form-input-field"} %>
           <%= f.input :address,
-              input_html: { autocomplete: "address", id: "user_address" }
-              %>
-          <%= f.input :price %>
-          <%= f.input :quantity %>
+            label: false,
+            placeholder: "Address",
+            input_html: { autocomplete: "address", id: "user_address", class: "form-input-field" } %>
+          <%= f.input :price,
+            label: false,
+            placeholder: "Price",
+            input_html: {class: "form-input-field"} %>
+          <%= f.input :quantity,
+            label: false,
+            placeholder: "Quantity available",
+            input_html: {class: "form-input-field"} %>
           <%= f.input :photo, as: :file %>
         </div>
 

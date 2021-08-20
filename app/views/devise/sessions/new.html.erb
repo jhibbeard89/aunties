@@ -6,10 +6,19 @@
       <%= f.input :email,
                   required: false,
                   autofocus: true,
-                  input_html: { autocomplete: "email" }, class: "input-form-border-color" %>
+                  input_html: {
+                    autocomplete: "email",
+                    class: "input-form-border-color form-input-field"
+                    },
+                  label: false,
+                  placeholder: "E-mail" %>
       <%= f.input :password,
                   required: false,
-                  input_html: { autocomplete: "current-password" } %>
+                  input_html: {
+                    autocomplete: "current-password",
+                    class: "form-input-field" },
+                  label: false,
+                  placeholder: "Password" %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 

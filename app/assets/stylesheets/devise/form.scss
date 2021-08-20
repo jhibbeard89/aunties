@@ -69,3 +69,18 @@ box-shadow: 0 0 3px $brand-orange !important;
 .text-muted {
   color: $brand-orange !important;
 }
+
+.form-input-field{
+  background-color: $transparent-white;
+  border: none;
+  color: $off-white;
+  font-size: 1.4rem;
+  border: 1px solid $off-white;
+  &::placeholder{
+    color: $brand-orange;
+  }
+  &:focus{
+    background-color: $transparent-black;
+    color: $off-white;
+  }
+}
