@@ -3,6 +3,9 @@
   color: white;
   font-weight: 600;
   padding: 10px 30px;
+  &:hover{
+    color: $off-white;
+  }
 }
 .btn-inverse{
   background-color: rgba(0, 0, 0, 0);
