@@ -67,3 +67,19 @@
 .btn-back {
   text-align: center;
 }
+
+.inline-buttons{
+  width: 100%;
+  margin: 25px 0 50px 0;
+  text-align: center;
+  .btn{
+    display: inline-block;
+    margin: 0 20px;
+  }
+  .btn-green{
+    background-color: $brand-green-translucent;
+    &:hover{
+      background-color: $brand-green;
+    }
+  }
+}
