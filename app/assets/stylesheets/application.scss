@@ -14,8 +14,8 @@
 // Devise components
 @import "devise/form";
 
-@import "meals";
-@import "orders";
+@import "models/meals";
+@import "models/orders";
 
 // Your CSS partials
 @import "components/buttons";
