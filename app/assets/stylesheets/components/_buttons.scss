@@ -52,3 +52,10 @@
     border-bottom-color: $off-white;
   }
 }
+
+.btn-alt-links{
+  color: $brand-green;
+  &:hover{
+    color: $brand-orange;
+  }
+}
