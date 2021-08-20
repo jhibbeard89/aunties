@@ -8,6 +8,9 @@
           <%= f.input :meal_name %>
           <%= f.input :category %>
           <%= f.input :description %>
+          <%= f.input :address,
+              input_html: { autocomplete: "address", id: "user_address" }
+              %>
           <%= f.input :price %>
           <%= f.input :quantity %>
           <%= f.input :photo, as: :file %>
