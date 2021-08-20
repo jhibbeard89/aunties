@@ -1,0 +1,22 @@
+.grid-body{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  .column-left{
+    grid-column: 1;
+    & > .btn{
+      margin-left: 5px;
+    }
+  }
+  .column-right{
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+.flex-body{
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: warp;
+  justify-content: flex-start;
+}
