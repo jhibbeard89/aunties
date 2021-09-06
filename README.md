@@ -5,6 +5,7 @@ Aunties is an application designed to connect producers of food and meals within
 Aunties was a project produced by a group during their Le Wagon bootcamp programme.
 
 ## Versions
+The following should be within the GEM file
 ```ruby
   # Ruby Version
   ruby '2.7.3'
