@@ -39,7 +39,7 @@ The following process is requried for installation.
   rails db:seed
 ```
 
-# Run server
+## Run server
 ```bash
   rails s
 ```
