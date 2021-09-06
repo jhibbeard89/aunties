@@ -1,6 +1,6 @@
 # Aunties
 
-Aunties is an application designed to connect producers of food and meals within a geographic area. Once a product has been placed by an auntie a user is able to purchase and collect the meal at a designated time.
+Aunties is an application designed to connect producers of food and meals within area geographic area. Once a product has been placed by an auntie a user is able to purchase and collect the meal at a designated time.
 
 Aunties was a project produced during Le Wagon bootcamp programme.
 
