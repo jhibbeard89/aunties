@@ -1,24 +1,47 @@
-# README
+# Aunties
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aunties is an application designed to connect producers of food and meals within area geographic area. Once the product has been placed a user is able to purchase and collect the meal at a designated time.
 
-Things you may want to cover:
+Aunties was a project produced by a group during their Le Wagon bootcamp programme.
 
-* Ruby version
+## Versions
+´´´ruby
+  # Ruby Version
+  ruby '2.7.3'
+  # Rails version
+  'rails', '~> 6.1.4'
+´´´
 
-* System dependencies
+## System dependencies
+´´´rails
 
-* Configuration
+  # Bundler
+  brew install bundler
+  # Node / npm
+  brew install node
+  # Yarn
+  brew install yarn
 
-* Database creation
+´´´
+## Installation
+The following process is requried for installation.
 
-* Database initialization
+´´´bash
+  # Bundle
+  bundle install
 
-* How to run the test suite
+  # Yarn
+  yarn install
 
-* Services (job queues, cache servers, search engines, etc.)
+  # Database and Migrations
+  rails db:create
 
-* Deployment instructions
+  rails db:migrate
 
-* ...
+  rails db:seed
+´´´
+
+# Run server
+´´´bash
+  rails s
+´´´
