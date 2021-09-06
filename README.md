@@ -44,3 +44,8 @@ The following process is requried for installation.
 ```bash
   rails s
 ```
+
+## Features
+The following features and APIs were used within Aunties, an API key is required.
+* [Mapbox](https://www.mapbox.com/)
+* [Cloudinary](https://cloudinary.com/)
