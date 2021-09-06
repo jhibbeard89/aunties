@@ -5,28 +5,26 @@ Aunties is an application designed to connect producers of food and meals within
 Aunties was a project produced by a group during their Le Wagon bootcamp programme.
 
 ## Versions
-´´´ruby
+```ruby
   # Ruby Version
   ruby '2.7.3'
   # Rails version
   'rails', '~> 6.1.4'
-´´´
+```
 
 ## System dependencies
-´´´rails
-
+```bash
   # Bundler
   brew install bundler
   # Node / npm
   brew install node
   # Yarn
   brew install yarn
-
-´´´
+```
 ## Installation
 The following process is requried for installation.
 
-´´´bash
+```bash
   # Bundle
   bundle install
 
@@ -39,9 +37,9 @@ The following process is requried for installation.
   rails db:migrate
 
   rails db:seed
-´´´
+```
 
 # Run server
-´´´bash
+```bash
   rails s
-´´´
+```
